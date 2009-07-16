@@ -71,7 +71,7 @@ src_install() {
     echo "PATH=\"/usr/${PNV}/Executables\"" > ${WORKBASE}/99mathematica
     einfo "Adding env.d entry for Mathematica"
     doenvd ${WORKBASE}/99mathematica
-    
+
     for directory in `find ${WORK} -type d -empty`
     do
         keepdir "/usr/${PNV}/`echo ${directory} | sed "s:^${WORK}::"`"
@@ -95,10 +95,10 @@ src_install() {
     docStrings="Mathematica MathematicaPlayer"
 
     # Add icon resources
-    
+
     bitSize="32 64 128"
     dodir "/usr/share/icons/hicolor"
-    
+
     for j in ${bitSize}; do
         dodir "/usr/share/icons/hicolor/${j}x${j}/apps"
         for d in ${appStrings}; do
