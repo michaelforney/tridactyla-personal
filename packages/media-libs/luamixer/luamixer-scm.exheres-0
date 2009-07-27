@@ -1,0 +1,22 @@
+# Copyright 2008 Michael Forney
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://github.com/michaelforney/luamixer.git"
+
+require scm-git cmake
+
+SUMMARY="Lua bindings for the alsa mixer library"
+HOMEPAGE="http://github.com/michaelforney/luamixer/tree/master"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-lang/lua
+"
+
+BUGS_TO="Michael Forney <michael@obberon.com>"
+
