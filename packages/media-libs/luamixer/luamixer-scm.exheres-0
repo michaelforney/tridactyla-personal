@@ -16,7 +16,7 @@ MYOPTIONS=""
 DEPENDENCIES="
     build+run:
         dev-lang/lua
-        media-libs/alsa-lib
+        sys-sound/alsa-lib
 "
 
 BUGS_TO="Michael Forney <michael@obberon.com>"
