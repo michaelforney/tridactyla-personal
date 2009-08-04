@@ -1,0 +1,23 @@
+# Copyright 2008 Michael Forney
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://github.com/michaelforney/${PN}.git"
+
+require scm-git cmake
+
+SUMMARY="Lua bindings for mpd"
+HOMEPAGE="http://github.com/michaelforney/${PN}/tree/master"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-lang/lua
+        sys-sound/alsa-lib
+"
+
+BUGS_TO="Michael Forney <michael@obberon.com>"
+
