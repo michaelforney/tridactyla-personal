@@ -1,4 +1,4 @@
-# Copyright 2008 Michael Forney
+# Copyright 2009 Michael Forney
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="Qucs is an integrated circuit simulator"
@@ -15,3 +15,4 @@ DEPENDENCIES="
         x11-libs/qt:3"
 
 DEFAULT_SRC_CONFIGURE_PARAMS=(--with-x)
+
