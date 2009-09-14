@@ -1,0 +1,30 @@
+# Copyright 2009 Michael Forney
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://github.com/michaelforney/stk-ucb-lib.git"
+
+require cmake scm-git
+
+SUMMARY="UC Berkeley's scheme libraries for various courses"
+HOMEPAGE="http://www-inst.eecs.berkeley.edu/~scheme/"
+
+BUGS_TO="mforney@berkeley.edu"
+
+LICENCES="as-is"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build:
+    build+run:
+"
+
+src_install() {
+    cmake_src_install
+
+    hereenvd 50stk-ucb-lib <<EOF
+SCHEME_LIBRARY_PATH="/usr/$(get_libdir)/stk/slib/"
+EOF
+}
+

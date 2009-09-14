@@ -1,0 +1,36 @@
+# Copyright 2009 Michael Forney
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://github.com/michaelforney/stk-ucb.git"
+
+require cmake multilib scm-git
+
+SUMMARY="UC Berkeley's variant of the STk scheme interpreter"
+HOMEPAGE="http://www-inst.eecs.berkeley.edu/~scheme/"
+
+BUGS_TO="mforney@berkeley.edu"
+
+LICENCES="as-is"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS="tk"
+
+DEPENDENCIES="
+    build+run:
+        tk? ( dev-lang/tk x11-libs/libX11 )
+    post,suggested:
+        dev-lang/stk-ucb-lib
+"
+
+CMAKE_SRC_CONFIGURE_PARAMS=( -DUSE_TK=OFF )
+
+src_install()
+{
+    cmake_src_install
+
+    hereenvd 99stk <<EOF
+STK_LIBRARY=/usr/$(get_libdir)/stk/${PV}
+
+EOF
+}
+
