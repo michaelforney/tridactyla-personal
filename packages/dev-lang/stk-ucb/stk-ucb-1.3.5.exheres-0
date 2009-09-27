@@ -19,13 +19,15 @@ DEPENDENCIES="
     build+run:
         tk? ( dev-lang/tk x11-libs/libX11 )
     post,suggested:
-        dev-lang/stk-ucb-lib
+        dev-scheme/stk-ucb-lib
 "
 
-CMAKE_SRC_CONFIGURE_PARAMS=( -DUSE_TK=OFF )
+src_configure() {
+    ecmake \
+        -DUSE_TK:BOOL=$(optionq tk && echo TRUE || echo FALSE)
+}
 
-src_install()
-{
+src_install() {
     cmake_src_install
 
     hereenvd 99stk <<EOF
