@@ -18,7 +18,7 @@ MYOPTIONS="tk"
 DEPENDENCIES="
     build+run:
         tk? ( dev-lang/tk x11-libs/libX11 )
-    post,suggested:
+    suggestion:
         dev-scheme/stk-ucb-lib
 "
 
