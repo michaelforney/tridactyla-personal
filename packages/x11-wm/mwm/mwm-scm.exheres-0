@@ -25,5 +25,7 @@ DEPENDENCIES="
         x11-utils/xcb-util
     build:
         dev-util/pkg-config
+    suggestion:
+        media-gfx/feh [[ description = [ For setting the wallpaper ] ]]
 "
 
