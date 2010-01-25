@@ -19,6 +19,8 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     build+run:
+        dev-libs/libyaml
+        x11-libs/libX11
         x11-libs/libxcb
         x11-utils/xcb-util
     build:
