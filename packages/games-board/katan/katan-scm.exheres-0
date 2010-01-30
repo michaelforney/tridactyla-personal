@@ -3,7 +3,7 @@
 
 SCM_REPOSITORY="git://github.com/michaelforney/katan.git"
 
-require kde4 scm-git
+require kde scm-git
 
 SUMMARY="A Settlers of Catan clone for KDE4"
 HOMEPAGE="http://katan.obberon.com"
