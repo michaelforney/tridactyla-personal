@@ -1,14 +1,14 @@
 # Copyright 2009 Michael Forney
 # Distributed under the terms of the GNU General Public License v2
 
-SCM_REPOSITORY="git://github.com/michaelforney/mwm.git"
+SCM_REPOSITORY="git://github.com/michaelforney/velox.git"
 
 require cmake scm-git
 
-SUMMARY="mwm is a small wm similar to dwm"
+SUMMARY="velox is a small wm similar to dwm"
 DESCRIPTION="
 "
-HOMEPAGE="http://github.com/michaelforney/mwm"
+HOMEPAGE="http://github.com/michaelforney/velox"
 
 BUGS_TO="michael@obberon.com"
 
