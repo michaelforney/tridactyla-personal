@@ -1,0 +1,37 @@
+# Copyright 2009 Michael Forney
+# Distributed under the terms of the GNU General Public License v2
+
+SCM_REPOSITORY="git://git.mini-dweeb.org/arnau/unagi.git"
+
+require scm-git autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.11 ] ]
+
+SUMMARY="Unagi is a modular compositing manager which aims to be efficient, lightweight and responsive"
+DESCRIPTION="
+Unagi is a modular compositing manager which aims to be efficient, lightweight and responsive. It is
+currently written in C programming language and based on XCB library client library. Any existing
+window manager can be used as long as it implements properly EWMH and ICCCM specifications (or at
+least parts of it which are needed), which is generally the case nowadays.
+
+This project also aims to provide a functional and stable software to improve window manager
+usability from an end-user point of view (for instance windows translucency, application-switcher
+using live thumbnails instead of plain icons, Exposé...), therefore it does not intend at all to
+provide useless eye-candy effects.
+"
+HOMEPAGE="http://projects.mini-dweeb.org/projects/unagi"
+
+BUGS_TO="michael@obberon.com"
+
+LICENCES="GPL-3"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build:
+        x11-proto/xcb-proto[>=1.6]
+    build+run:
+        x11-libs/libxcb[>=1.4]
+        x11-utils/xcb-util[~scm]
+
+"
+
