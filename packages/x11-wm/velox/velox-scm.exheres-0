@@ -15,9 +15,9 @@ BUGS_TO="michael@obberon.com"
 LICENCES="GPL-2"
 SLOT="0"
 PLATFORMS="~amd64"
-MYOPTIONS="mpd"
+MYOPTIONS="alsa mpd"
 
-CMAKE_SRC_CONFIGURE_OPTION_ENABLES=( "mpd MPD" )
+CMAKE_SRC_CONFIGURE_OPTION_ENABLES=( "alsa ALSA" "mpd MPD" )
 
 DEPENDENCIES="
     build+run:
@@ -26,7 +26,8 @@ DEPENDENCIES="
         x11-libs/libxcb
         x11-utils/xcb-util
 
-        mpd? ( media-libs/libmpdclient )
+        alsa?   ( sys-sound/alsa-lib )
+        mpd?    ( media-libs/libmpdclient )
     build:
         dev-util/pkg-config
     suggestion:
