@@ -34,3 +34,5 @@ DEPENDENCIES="
         media-gfx/feh [[ description = [ For setting the wallpaper ] ]]
 "
 
+DEFAULT_SRC_INSTALL_EXTRA_DOCS=( keys.yaml.dvorak )
+
