@@ -22,7 +22,9 @@ DEPENDENCIES="
         dev-libs/libyaml
         x11-libs/libX11
         x11-libs/libxcb
-        x11-utils/xcb-util[~scm]
+        x11-utils/xcb-util[>=0.3.8]
+        x11-utils/xcb-util-image[>=0.3.8]
+        x11-utils/xcb-util-wm[>=0.3.8]
 
         alsa?   ( sys-sound/alsa-lib )
         mpd?    ( media-libs/libmpdclient )
